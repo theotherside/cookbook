@@ -1,4 +1,6 @@
 Cookbook::Application.routes.draw do
+  resources :recipes
+
   get "/contact", :controller => "home", :action=>"contact", :as => "contact"
   get "/about", :controller => "home", :action=>"about", :as => "about"
   root :controller => "home", :action => "index"
